@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		246A2A01299AB720002E6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A2A00299AB720002E6BB8 /* AppDelegate.swift */; };
 		246A2A03299AB720002E6BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A2A02299AB720002E6BB8 /* SceneDelegate.swift */; };
-		246A2A05299AB720002E6BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A2A04299AB720002E6BB8 /* ViewController.swift */; };
+		246A2A05299AB720002E6BB8 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A2A04299AB720002E6BB8 /* TempViewController.swift */; };
 		246A2A08299AB720002E6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246A2A06299AB720002E6BB8 /* Main.storyboard */; };
 		246A2A0A299AB721002E6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246A2A09299AB721002E6BB8 /* Assets.xcassets */; };
 		246A2A0D299AB721002E6BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246A2A0B299AB721002E6BB8 /* LaunchScreen.storyboard */; };
+		24DCEB45299AD70F003C66AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DCEB44299AD70F003C66AA /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		246A29FD299AB720002E6BB8 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246A2A00299AB720002E6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246A2A02299AB720002E6BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		246A2A04299AB720002E6BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		246A2A04299AB720002E6BB8 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		246A2A07299AB720002E6BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		246A2A09299AB721002E6BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		246A2A0C299AB721002E6BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		246A2A0E299AB721002E6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24DCEB44299AD70F003C66AA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				246A2A00299AB720002E6BB8 /* AppDelegate.swift */,
 				246A2A02299AB720002E6BB8 /* SceneDelegate.swift */,
-				246A2A04299AB720002E6BB8 /* ViewController.swift */,
+				246A2A04299AB720002E6BB8 /* TempViewController.swift */,
+				24DCEB44299AD70F003C66AA /* MapViewController.swift */,
 				246A2A06299AB720002E6BB8 /* Main.storyboard */,
 				246A2A09299AB721002E6BB8 /* Assets.xcassets */,
 				246A2A0B299AB721002E6BB8 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246A2A05299AB720002E6BB8 /* ViewController.swift in Sources */,
+				246A2A05299AB720002E6BB8 /* TempViewController.swift in Sources */,
 				246A2A01299AB720002E6BB8 /* AppDelegate.swift in Sources */,
 				246A2A03299AB720002E6BB8 /* SceneDelegate.swift in Sources */,
+				24DCEB45299AD70F003C66AA /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
