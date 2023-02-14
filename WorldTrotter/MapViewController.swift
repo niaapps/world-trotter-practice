@@ -42,8 +42,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func initMapTypeSegmentedControl() {
+        let standardString = NSLocalizedString("Standard", comment: "Standard map view")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
+
+        
         mapTypeSegmentedControl
-            = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+            = UISegmentedControl(items: [standardString, hybridString, satelliteString])
         mapTypeSegmentedControl.backgroundColor = UIColor.white
         mapTypeSegmentedControl.selectedSegmentIndex = 0
         mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeChanged(_:)), for: .valueChanged)

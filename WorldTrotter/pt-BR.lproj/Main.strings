@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "212"; ObjectID = "FLN-9d-maR"; */
+"FLN-9d-maR.placeholder" = "212";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "UQK-Jt-M0X"; */
+"UQK-Jt-M0X.text" = "100";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "er7-NH-Va1"; */
+"er7-NH-Va1.title" = "Mapa";
+
+/* Class = "UILabel"; text = "DEGREES IN CELSIUS"; ObjectID = "gMe-ON-QCh"; */
+"gMe-ON-QCh.text" = "GRAUS EM CELSIUS";
+
+/* Class = "UITabBarItem"; title = "Temps"; ObjectID = "jGF-p3-EsF"; */
+"jGF-p3-EsF.title" = "Temps";
+
+/* Class = "UILabel"; text = "DEGREES IN FAHRENHEIT"; ObjectID = "ka2-Oh-gKx"; */
+"ka2-Oh-gKx.text" = "GRAUS EM FAHRENHEIT";
+
+/* Class = "UILabel"; text = "- can be converted to -"; ObjectID = "lyU-cj-J3o"; */
+"lyU-cj-J3o.text" = "- pode ser convertido para -";
