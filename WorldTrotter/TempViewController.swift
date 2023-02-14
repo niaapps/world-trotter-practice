@@ -9,13 +9,35 @@ import UIKit
 
 class TempViewController: UIViewController {
 
-//    override func viewDidLoad() {
-//        print("TempViewController - \(#function)")
-//        super.viewDidLoad()
-//    }
+    override func viewDidLoad() {
+        updateCelsiusLabel()
+        super.viewDidLoad()
+    }
+    
+    @IBOutlet var celsiusLabel: UILabel!
+    @IBOutlet var textField: UITextField!
+    
+    var fahrenheightValue: Measurement<UnitTemperature>? {
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
+    var celsiusValue: Measurement<UnitTemperature>? {
+        if let fahrenheightValue {
+            return fahrenheightValue.converted(to: .celsius)
+        } else {
+            return nil
+        }
+    }
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
     
     override func viewDidAppear(_ animated: Bool) {
-//        print("TempViewController - \(#function)")
         view.backgroundColor = UIColor(
             red: .random(in: 0...1),
             green: .random(in: 0...1),
@@ -25,26 +47,24 @@ class TempViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-//        let firstFrame = CGRect(x: 0, y: 0, width: 100, height: 150)
-//        CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize())
-//        let firstView = UIView(frame: firstFrame)
-//        firstView.backgroundColor = UIColor.cyan
-
-        
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.colors = [UIColor.red.cgColor,
-//                                UIColor.yellow.cgColor,
-//                                UIColor.green.cgColor,
-//                                UIColor.blue.cgColor]
-//
-//        gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-        
-//        print(view.layer.sublayers)
-
-//        let secondFrame = CGRect(x: 20, y: 30, width: 50, height: 50)
-//        let secondView = UIView(frame: secondFrame)
-//        secondView.backgroundColor = UIColor.purple
-//        firstView.addSubview(secondView)
+    func updateCelsiusLabel() {
+        if let celsiusValue {
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
+        } else {
+            celsiusLabel.text = "???"
+        }
+    }
+    
+    @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
+        if let text = textField.text, let value = Double(text) {
+            fahrenheightValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahrenheightValue = nil
+        }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
 

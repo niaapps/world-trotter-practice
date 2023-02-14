@@ -19,16 +19,22 @@ enum CityNames: String {
     case sp       = "São Paulo"
 }
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     var mapView: MKMapView!
     var mapTypeSegmentedControl: UISegmentedControl!
     var centerSegmentedControl: UISegmentedControl!
     var countryButton: UIButton!
     var cities = usCities
     
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        print("MAP VIEW DID CHANGE")
+    }
+    
     override func loadView() {
         mapView = MKMapView()
+        mapView.delegate = self
         view = mapView
+        
         
         initMapTypeSegmentedControl()
         initCenterSegmentedControl()

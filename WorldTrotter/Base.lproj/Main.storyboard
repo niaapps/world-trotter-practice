@@ -21,32 +21,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="212" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLN-9d-maR">
+                                <rect key="frame" x="113" y="89" width="167" height="121"/>
+                                <color key="textColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="100"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="a3x-ZM-Vlk"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- is really -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyU-cj-J3o">
-                                <rect key="frame" x="164.33333333333334" y="257.33333333333331" width="64.666666666666657" height="16.333333333333314"/>
+                                <rect key="frame" x="164.33333333333334" y="259" width="64.666666666666657" height="16.333333333333314"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-sq-8Yw">
-                                <rect key="frame" x="113" y="89" width="167" height="119.33333333333331"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="100"/>
-                                <color key="textColor" systemColor="systemMintColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAHRENHEIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ka2-Oh-gKx">
-                                <rect key="frame" x="135.66666666666666" y="193.33333333333334" width="121.99999999999997" height="24"/>
+                                <rect key="frame" x="135.66666666666666" y="195" width="121.99999999999997" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-Jt-M0X">
-                                <rect key="frame" x="113" y="293.66666666666669" width="167" height="120"/>
+                                <rect key="frame" x="113" y="295.33333333333331" width="167" height="120"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="100"/>
                                 <color key="textColor" systemColor="systemMintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CELSIUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-ON-QCh">
-                                <rect key="frame" x="155" y="398.66666666666669" width="83.333333333333314" height="24"/>
+                                <rect key="frame" x="155" y="400.33333333333331" width="83.333333333333314" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,22 +57,35 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ka2-Oh-gKx" firstAttribute="top" secondItem="x8P-sq-8Yw" secondAttribute="bottom" constant="-15" id="4Im-Tu-27f"/>
-                            <constraint firstItem="lyU-cj-J3o" firstAttribute="centerX" secondItem="x8P-sq-8Yw" secondAttribute="centerX" id="HJP-e1-y6B"/>
-                            <constraint firstItem="gMe-ON-QCh" firstAttribute="centerX" secondItem="x8P-sq-8Yw" secondAttribute="centerX" id="K99-JT-35Y"/>
+                            <constraint firstItem="FLN-9d-maR" firstAttribute="bottom" secondItem="ka2-Oh-gKx" secondAttribute="top" constant="15" id="33m-Pj-Kht"/>
+                            <constraint firstItem="FLN-9d-maR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EdZ-Eq-bTn"/>
+                            <constraint firstItem="lyU-cj-J3o" firstAttribute="centerX" secondItem="FLN-9d-maR" secondAttribute="centerX" id="GSx-Vj-Wme"/>
+                            <constraint firstItem="ka2-Oh-gKx" firstAttribute="centerX" secondItem="FLN-9d-maR" secondAttribute="centerX" id="KbZ-a9-std"/>
+                            <constraint firstItem="gMe-ON-QCh" firstAttribute="centerX" secondItem="FLN-9d-maR" secondAttribute="centerX" id="Lvi-K1-Wyc"/>
                             <constraint firstItem="gMe-ON-QCh" firstAttribute="top" secondItem="UQK-Jt-M0X" secondAttribute="bottom" constant="-15" id="NvI-hk-RRE"/>
-                            <constraint firstItem="x8P-sq-8Yw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eR0-Ia-Nye"/>
                             <constraint firstItem="lyU-cj-J3o" firstAttribute="top" secondItem="ka2-Oh-gKx" secondAttribute="bottom" constant="40" id="j5J-01-Be8"/>
-                            <constraint firstItem="x8P-sq-8Yw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oJE-sH-eh9"/>
-                            <constraint firstItem="ka2-Oh-gKx" firstAttribute="centerX" secondItem="x8P-sq-8Yw" secondAttribute="centerX" id="q7X-sa-urK"/>
-                            <constraint firstItem="UQK-Jt-M0X" firstAttribute="centerX" secondItem="x8P-sq-8Yw" secondAttribute="centerX" id="tws-kj-H8R"/>
+                            <constraint firstItem="FLN-9d-maR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="lus-SO-0Vu"/>
+                            <constraint firstItem="UQK-Jt-M0X" firstAttribute="centerX" secondItem="FLN-9d-maR" secondAttribute="centerX" id="mJn-ag-bPd"/>
                             <constraint firstItem="UQK-Jt-M0X" firstAttribute="top" secondItem="lyU-cj-J3o" secondAttribute="bottom" constant="20" id="wcL-cn-bsn"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zi9-Uo-5id" appends="YES" id="kj4-mZ-E8a"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Temps" image="ConvertIcon" id="jGF-p3-EsF"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="UQK-Jt-M0X" id="of5-ZQ-0Tp"/>
+                        <outlet property="textField" destination="FLN-9d-maR" id="BNO-b5-o0G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zi9-Uo-5id">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="54J-Qn-C6U"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="420.61068702290072" y="3.5211267605633805"/>
         </scene>
