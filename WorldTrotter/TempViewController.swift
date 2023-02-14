@@ -57,16 +57,18 @@ class TempViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, let value = Double(text) {
-            fahrenheightValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheightValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheightValue = nil
         }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let existingTextHasDecimalSeparator = textField.text?.range(of: ".") != nil;
-        let replacementTextHasDecimalSeparator = string.range(of: ".") != nil;
+        let currentLocale = Locale.current
+        let decimalSeparator = currentLocale.decimalSeparator ?? "."
+        let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator) != nil;
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator) != nil;
         return !(existingTextHasDecimalSeparator && replacementTextHasDecimalSeparator);
     }
     
