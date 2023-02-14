@@ -7,10 +7,11 @@
 
 import UIKit
 
-class TempViewController: UIViewController {
+class TempViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         updateCelsiusLabel()
+        textField.delegate = self
         super.viewDidLoad()
     }
     
@@ -61,6 +62,12 @@ class TempViewController: UIViewController {
         } else {
             fahrenheightValue = nil
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".") != nil;
+        let replacementTextHasDecimalSeparator = string.range(of: ".") != nil;
+        return !(existingTextHasDecimalSeparator && replacementTextHasDecimalSeparator);
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
