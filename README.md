@@ -1,2 +1,2 @@
 # world-trotter-practice
-### Just practicing to get better at Swift/iOS 🗺️
+### Practicing to improve my knowledge of Swift/iOS 🗺️
